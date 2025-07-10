@@ -29,3 +29,4 @@ npm i
 ╰─ npx ultracite 
 https://tailwindcss.com/docs/installation/using-vite
 npm install tailwindcss @tailwindcss/vite
+╰─ npx shadcn@latest add button
