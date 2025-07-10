@@ -14,6 +14,9 @@ import {
 export function RoomList() {
   const { data, isLoading } = useRooms()
 
+  // Garante que data é sempre um array para evitar erro de .map
+  const rooms = Array.isArray(data) ? data : []
+
   return (
     <Card>
       <CardHeader>
@@ -27,7 +30,7 @@ export function RoomList() {
           <p className="text-muted-foreground text-sm">Carregando salas...</p>
         )}
 
-        {data?.map((room) => {
+        {rooms.map((room) => {
           return (
             <Link
               className="flex items-center justify-between rounded-lg border p-3 hover:bg-accent/50"
@@ -55,6 +58,6 @@ export function RoomList() {
           )
         })}
       </CardContent>
-    </Card>
-  )
-}
+        </Card>
+      )
+    }
