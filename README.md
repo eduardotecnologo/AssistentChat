@@ -25,3 +25,7 @@ npm install drizzle-kit --save-dev
 
 ## CREATE FRONT
 ╰─ npm create vite@latest front
+npm i
+╰─ npx ultracite 
+https://tailwindcss.com/docs/installation/using-vite
+npm install tailwindcss @tailwindcss/vite
