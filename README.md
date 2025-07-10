@@ -21,3 +21,7 @@ npm install drizzle-kit --save-dev
 ╰─ npx drizzle-kit studio
 ╰─ npm i drizzle-seed -D
 ─ npm run db:seed
+
+
+## CREATE FRONT
+╰─ npm create vite@latest front
