@@ -56,7 +56,7 @@ export function QuestionForm({ roomId }: QuestionFormProps) {
       <CardHeader>
         <CardTitle>Fazer uma Pergunta</CardTitle>
         <CardDescription>
-          Digite sua pergunta abaixo para receber uma resposta gerada por I.A.
+          Digite sua pergunta abaixo para receber uma resposta gerada pela Wiki I.A.
         </CardDescription>
       </CardHeader>
       <CardContent>

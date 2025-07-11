@@ -52,7 +52,7 @@ export function CreateRoomForm() {
         <CardTitle>Criar sala</CardTitle>
         <CardDescription>
           Crie uam nova sala para começar a fazer perguntas e receber respostas
-          da I.A.
+          da Wiki I.A.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -67,7 +67,7 @@ export function CreateRoomForm() {
               render={({ field }) => {
                 return (
                   <FormItem>
-                    <FormLabel>Nome da sala</FormLabel>
+                    <FormLabel>Nome da Sala</FormLabel>
                     <FormControl>
                       <Input
                         {...field}
@@ -97,7 +97,7 @@ export function CreateRoomForm() {
             />
 
             <Button className="w-full" type="submit">
-              Criar sala
+              Criar Sala
             </Button>
           </form>
         </Form>

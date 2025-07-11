@@ -1,7 +1,7 @@
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { useRooms } from '../http/use-rooms'
-import { dayjs } from '../lib/dayjs'
+import { useRooms } from '@/http/use-rooms'
+import { dayjs } from '@/lib/dayjs'
 import { Badge } from './ui/badge'
 import {
   Card,
@@ -13,9 +13,6 @@ import {
 
 export function RoomList() {
   const { data, isLoading } = useRooms()
-
-  // Garante que data é sempre um array para evitar erro de .map
-  const rooms = Array.isArray(data) ? data : []
 
   return (
     <Card>
@@ -30,7 +27,7 @@ export function RoomList() {
           <p className="text-muted-foreground text-sm">Carregando salas...</p>
         )}
 
-        {rooms.map((room) => {
+        {data?.map((room) => {
           return (
             <Link
               className="flex items-center justify-between rounded-lg border p-3 hover:bg-accent/50"
@@ -58,6 +55,6 @@ export function RoomList() {
           )
         })}
       </CardContent>
-        </Card>
-      )
-    }
+    </Card>
+  )
+}
