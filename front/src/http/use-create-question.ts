@@ -71,7 +71,7 @@ export function useCreateQuestion(roomId: string) {
               }
             }
 
-            return question
+            return question;
           })
         }
       )

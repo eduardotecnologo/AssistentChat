@@ -1,7 +1,7 @@
 /** biome-ignore-all lint/suspicious/noConsole: <explanation> */
 import { useRef, useState } from 'react'
 import { Navigate, useParams } from 'react-router-dom'
-import { Button } from '../components/ui/button'
+import { Button } from '@/components/ui/button'
 
 const isRecordingSupported =
   !!navigator.mediaDevices &&
@@ -30,6 +30,7 @@ export function RecordRoomAudio() {
     }
   }
 
+  // Salvando o audio no servidor
   async function uploadAudio(audio: Blob) {
     const formData = new FormData()
 
@@ -65,7 +66,7 @@ export function RecordRoomAudio() {
     }
 
     recorder.current.onstop = () => {
-      console.log('Gravação encerrada/pausada')
+      console.log('Gravação encerrada/pausada!')
     }
 
     recorder.current.start()
@@ -73,12 +74,12 @@ export function RecordRoomAudio() {
 
   async function startRecording() {
     if (!isRecordingSupported) {
-      alert('O seu navegador não suporta gravação')
+      alert('O seu navegador não suporta gravação!')
       return
     }
 
     setIsRecording(true)
-
+// Acesso ao microfone do usuário
     const audio = await navigator.mediaDevices.getUserMedia({
       audio: {
         echoCancellation: true,
@@ -103,11 +104,11 @@ export function RecordRoomAudio() {
   return (
     <div className="flex h-screen flex-col items-center justify-center gap-3">
       {isRecording ? (
-        <Button onClick={stopRecording}>Pausar gravação</Button>
+        <Button onClick={stopRecording}>Pausar gravação!</Button>
       ) : (
-        <Button onClick={startRecording}>Gravar áudio</Button>
+        <Button onClick={startRecording}>Gravar áudio!</Button>
       )}
-      {isRecording ? <p>Gravando...</p> : <p>Pausado</p>}
+      {isRecording ? <p>Gravando...</p> : <p>Pausado!</p>}
     </div>
   )
 }

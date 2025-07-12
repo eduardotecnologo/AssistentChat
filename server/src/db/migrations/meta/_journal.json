@@ -15,6 +15,13 @@
       "when": 1752156569872,
       "tag": "0001_melted_shooting_star",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1752343999499,
+      "tag": "0002_far_fantastic_four",
+      "breakpoints": true
     }
   ]
 }
